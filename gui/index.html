@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Facultat Informàtica de Barcelona - Programador PIC18F45K22</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/gui.css'>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src='js/renderer.js'></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+
+                <fieldset>
+                    <legend class="mx-4">Device configuration</legend>
+                    
+                    <div class="row mx-2">
+                        <div class="col-6">
+                            <label>PICkit:</label>
+                            <span id="pickitDetected">Not detected</span>
+                        </div>
+
+                        <div class="col-4">
+                            <label>PICkit VPP:</label>
+                            <span id="pickitVpp">0</span>V
+                        </div>
+                    </div>
+                    
+                    <div class="row mx-2">
+                        <div class="col-6">
+                            <label>PICkit firmware:</label>
+                            <span id="firmwareVersion">N/A</span>
+                        </div>
+                        <div class="col-4">
+                            <label>PICkit VDD:</label>
+                            <span id="pickitVdd">0</span>V
+                        </div>
+                    </div>
+
+                    <div class="row mx-2">
+                        <div class="col-4">
+                            <label>Device:</label>
+                            <span id="deviceName">Not detected</span>
+                        </div>
+                        <div class="col-8">
+                            <label>Configuration:</label>
+                            <span id="configurationWords">0000 0000 0000 0000 0000 0000 0000 0000</span>
+                        </div>
+                    </div>
+
+                    <div class="row mx-2">
+                        <div class="col-4">
+                            Checksum:
+                            <span id="checksum">0000</span>
+                        </div>
+                        <div class="col-8">
+                            User IDs:
+                            <span id="userIds">00 00 00 00 00 00 00 00</span>
+                        </div>
+                    </div>
+    
+                    
+                    
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row mt-10">
+            <div class="col-7">
+                <button type="button" class="btn btn-primary" id="btnRead">Read</button>
+                <button type="button" class="btn btn-primary" id="btnWrite">Write</button>
+                <button type="button" class="btn btn-primary" id="btnVerify">Verify</button>
+                <button type="button" class="btn btn-primary" id="btnErase">Erase</button>
+                <button type="button" class="btn btn-primary" id="btnBlankCheck">Blank check</button>
+                
+            </div>
+            <div class="col-5">
+                Status: <span id="status">PICkit not detected</span>
+            </div>
+        </div>
+
+        <div class="row mt-10">
+            <div class="col-12">
+                <div class="progress" role="progressbar" id="progressBar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row mt-10">
+            <div class="col-12">
+                <fieldset>
+                    <legend class="mx-4">
+                        Program memory. <small class="source">Source: <span id="memorySource">None (Empty/Erased)</span></small>
+                    </legend>
+
+                    <div class="table-container-program">
+                        <table class="table table-bordered table-sm align-middle" id="programMemoryView">
+                            
+                        </table>
+                    </div>
+                </fieldset>
+                    
+            </div>
+        </div>
+
+        <div class="row mt-10">
+            <div class="col-12">
+                <fieldset>
+                    <legend class="mx-4">EEPROM Data</legend>
+
+                    <div class="table-container-eeprom">
+                        <table class="table table-bordered table-sm align-middle" id="eepromMemoryView">
+                        
+                        </table>
+                    </div>
+                    
+                </fieldset>
+                    
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

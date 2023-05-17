@@ -1,0 +1,56 @@
+fieldset {
+
+    border-width: 2px !important;
+    border-style: groove !important;
+    border-color: rgb(192, 192, 192) !important;
+    border-image: initial !important;
+}
+
+legend {
+    float: none !important;
+    width: auto !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.table  td {
+
+    text-align: center !important;
+}
+
+.table tr td:nth-child(1) {
+
+    background-color: #a3a3a3;
+}
+
+#programMemoryView {
+
+    margin-bottom: 0px !important;
+}
+
+.table-container-program {
+
+    height: 200px !important;
+    overflow-y: scroll !important;
+}
+
+#eepromMemoryView {
+
+    margin-bottom: 0px !important;
+}
+
+.table-container-eeprom {
+
+    height: 100px !important;
+    overflow-y: scroll !important;
+}
+
+small.source {
+    font-size: 15px !important;
+    position: relative !important;
+    /* top: -4px; */
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}

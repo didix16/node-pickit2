@@ -1,0 +1,57 @@
+{
+  "author": {
+    "name": "Dídac Rodríguez",
+    "email": "drodriguez816@gmail.com"
+  },
+  "name": "node-pickit2",
+  "description": "A PIC18F45K22 programmer for Linux, Windows and Mac OS X",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-forge make",
+    "start": "electron .",
+    "postinstall": "electron-rebuild -f -w node-hid"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "node-hid": "^2.1.2"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "electron": "^24.2.0",
+    "electron-rebuild": "^3.2.9"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "pickit2"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
