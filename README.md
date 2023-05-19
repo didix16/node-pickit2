@@ -3,6 +3,8 @@ Microchip's PICKIT 2 software port written in Vanilla Javascript. It only suppor
 
 The code is originally picked up from C# PicKit 2 application source code at [Pickit 2 PC Application Source Code v2.61](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/SoftwareLibraries/Firmware/PICkit2_PCAppSource_V2_61.zip)
 
+I leave the code here in the repository in case link above does not work anymore. [PICkit2_PCAppSource_V2_61.zip](PICkit2_PCAppSource_V2_61.zip)
+
 You can find more source code for firmwares and application source versions by searching 'PicKit' on their web page at https://www.microchip.com/en-us/search?searchQuery=PicKit&category=ALL&fq=start%3D0%26rows%3D500
 
 # Requirements
